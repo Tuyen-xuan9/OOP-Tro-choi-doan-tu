@@ -15,25 +15,6 @@ Một trò chơi đoán từ (kiểu Hangman) viết bằng **C++**, chạy trê
 └── input.txt        # Danh sách các từ dùng để chơi
 ```
 
-## Kiến trúc & mối quan hệ giữa các lớp
-
-- **`Game`** là lớp trung tâm. Nó điều phối toàn bộ vòng lặp chơi: khởi tạo → chọn độ khó → chơi → kết thúc vòng → hỏi chơi tiếp.
-- **`Player`** lưu trạng thái người chơi: tên, điểm số, số lần đoán sai; cũng chịu trách nhiệm nhận input từ bàn phím (tên, ký tự đoán, số nguyên).
-- **`WordList`** đọc danh sách từ từ file `input.txt` và chọn ngẫu nhiên một từ để chơi.
-- **`Utils`** là tập hợp hàm tĩnh (in màn hình, ẩn ký tự, xử lý ký tự đoán, kiểm tra hoàn thành...).
-
-## Tính năng chính
-
-| Tính năng | Mô tả |
-|---|---|
-| 3 mức độ khó | Ẩn 30% / 50% / 70% số ký tự trong từ |
-| Gợi ý (Hint) | Nhấn `?` để mở 1 ký tự ngẫu nhiên, tốn **5 điểm** (yêu cầu tối thiểu 5 điểm) |
-| Hệ thống điểm | +5 điểm cho mỗi ký tự đoán đúng, -5 điểm khi dùng hint |
-| Giới hạn đoán sai | Thua sau **7 lần** đoán sai |
-| Đồng hồ đếm giờ | Tính thời gian chơi mỗi ván (hỗ trợ pause khi thắng/thua) |
-| Chơi nhiều ván | Có thể chơi lại nhiều lần trong một phiên, đổi độ khó mỗi ván |
-| Danh sách từ tùy chỉnh | Đọc từ file `input.txt`, dễ dàng thêm/bớt từ |
-
 ## Cách chơi
 
 1. Nhập tên khi được yêu cầu.
@@ -52,8 +33,6 @@ Dự án chỉ dùng thư viện chuẩn C++ (STL), không cần thư viện ngo
 g++ -std=c++11 main.cpp Game.cpp Player.cpp Utils.cpp WordList.cpp -o WordGuess.exe
 WordGuess.exe
 ```
-
-> ⚠️ Lưu ý: code hiện dùng `system("cls")` và `system("pause")` — đây là các lệnh đặc thù của **Windows (cmd.exe)**. Trên Linux/macOS cần đổi thành `system("clear")` và bỏ/thay `system("pause")` bằng cách đọc input thủ công.
 
 Đảm bảo file `input.txt` nằm cùng thư mục với file thực thi.
 
