@@ -40,6 +40,3 @@ WordGuess.exe
 
 - Trình biên dịch C++ hỗ trợ **C++11** trở lên 
 - Hệ điều hành: **Windows** 
-
-## Ghi chú 
-- Chuỗi hiển thị trong console không dùng dấu tiếng Việt có dấu (chỉ dùng tiếng Việt không dấu) để tránh lỗi encoding trên console Windows mặc định.
