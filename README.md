@@ -34,7 +34,7 @@ g++ -std=c++11 main.cpp Game.cpp Player.cpp Utils.cpp WordList.cpp -o WordGuess.
 WordGuess.exe
 ```
 
-Đảm bảo file `input.txt` nằm cùng thư mục với file thực thi.
+vào thư mục click vào WordGuess.exe và bắt đầu chơi
 
 ## Yêu cầu hệ thống
 
